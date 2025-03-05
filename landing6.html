@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing_page_6</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <!-- Landing 6 -->
+  <div class="container">
+    <!-- Section principale avec le titre et le cercle -->
+    <div class="main-section">
+      <!-- Titre principal -->
+      <h1>
+        THE<br />
+        TEAM.
+      </h1>
+
+      <!-- Cercle avec texte autour et flèche au centre -->
+      <button class="circle-wrapper">
+        <svg viewBox="0 0 200 200" class="circle-svg">
+          <!-- Cercle servant de chemin pour le texte -->
+          <circle 
+            id="circlePath"
+            cx="100" cy="100"
+            r="55"
+            fill="none"
+            stroke="#333"
+            stroke-width="2"
+          />
+
+          <!-- Texte suivant le chemin circulaire -->
+          <text fill="#333" font-size="20.8" font-weight="bold">
+            <textPath href="#circlePath" startOffset="0%">
+              click and scroll – click and scroll –
+            </textPath>
+          </text>
+
+          <!-- Flèche au centre -->
+          <polygon 
+            points="80,80 130,102 80,120" 
+            fill="#333" 
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Boîte de description -->
+    <div class="description-box">
+      <p>
+        Nos différents membres d’équipes ont travaillé 
+        ensemble pour créer l’application parfaite pour créer 
+        un album souvenir parfait pour vous, et pour que 
+        vous poussiez le recevoir directement chez vous.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -41,7 +41,7 @@ body {
 .rectangle-footer {
     background: #709CA0;
     border-radius: 179.01px;
-    width: 30%;
+    width: 40%;
     height: 55px;
     position: relative;
     margin: 0 auto;
@@ -193,4 +193,14 @@ body {
     padding: 20px;
     margin: 20px auto;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cta-section,
+.mentions,
+.confidentialité,
+.contact-section {
+    cursor: pointer;
+    border: none; 
+    padding: 0;
+    background: none;
 }

@@ -1,0 +1,70 @@
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style du corps de la page */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #BBC3C0, #384C50);
+    min-height: 100vh;
+    color: #fff;
+  }
+  
+  /* Conteneur principal */
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+  }
+  
+  /* Section principale */
+  .main-section {
+    display: flex;
+    align-items: center;
+    gap: 150px; /* Espace entre le titre et le cercle */
+  }
+  
+  /* Style du titre */
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Style de la boîte de description */
+  .description-box {
+    width: 400px;
+    background: linear-gradient(to right, #384C50, #BBC3C0);;
+    background-color:rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+    color: #fff;
+  }
+  
+  /* Style du cercle et son contenu */
+  .circle-wrapper {
+    background: #7A8A82;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #333;
+    cursor: pointer; /* Ajoute un curseur de pointeur pour indiquer que c'est un bouton */
+    padding: 0;
+  }
+  
+  /* Ajuste la taille du SVG */
+  .circle-svg {
+    width: 100%;
+    height: 100%;
+  }
