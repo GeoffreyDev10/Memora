@@ -1,0 +1,196 @@
+/* mise en place de la page */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Cache le débordement horizontal */
+    box-sizing: border-box; /* Inclut les bordures/marges dans les calculs de largeur */
+  }
+  footer {
+    background-color: rgba(51, 71, 76, 1);
+    display: flex; /* Affiche les éléments en ligne */
+    flex-direction: column; 
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center;
+    padding: 20px; /* Ajoute de l'espace intérieur */
+    text-align: center; 
+    position: relative; /* Positionnement relatif */
+}
+
+.footer-content {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0; /* Marge de 10px en haut et en bas */
+}
+
+.separation {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 0 auto 20px auto;
+}
+
+.rectangle-footer {
+    background: #709CA0;
+    border-radius: 179.01px;
+    width: 30%;
+    height: 55px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+.name, 
+.mentions, 
+.droits, 
+.confidentialité, 
+.language-selector, 
+.rectangle-footer2,
+.contact-section {
+    margin: 10px auto; 
+    display: block; 
+    align-items: center;
+    justify-content: center;
+    flex: 1 30px;
+}
+
+.name {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+.droits,
+.mentions,
+.confidentialité,
+.contact,
+.cta-section,
+.language-selector {
+    font-size: 14px; 
+    margin: 10px 0;
+}
+
+.droits {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+    display: block;
+    opacity: 0.8;
+}
+
+.contact-section,
+.cta-section,
+.language-selector {
+    margin-top: 20px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.cta-section .test,
+.contact,
+.questions {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f8f2;
+    text-align: center;
+    left: 1043px;
+    top: 39.51px;
+}
+
+.contact {
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.contact:hover {
+    opacity: 1;
+}
+
+.mentions, .confidentialité {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    margin: 5px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.mentions:hover, .confidentialité:hover {
+    opacity: 1;
+}
+
+.language-selector .langue {
+    font-size: 14px;
+    font-weight: bold;
+}  
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.langue:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.langue {
+    font-size: 14px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.test {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f8f2;
+    text-align: center;
+    margin-top: 20px;
+    left: 1043px;
+    top: 39.51px;
+}
+
+.questions {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.rectangle-footer2 {
+    background: #709CA0;
+    border-radius: 20px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
