@@ -317,6 +317,7 @@ header nav a {
   margin-top: -15%; /* Ajoute un peu d'espace entre l'image et le texte */
   width: 80%; /* Augmente la taille de l'image tout en restant fluide */
   max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+  height: auto;
 }
 
 .accueil-phone {
@@ -348,6 +349,25 @@ header nav a {
   font-size: 30px;
   color: white;
 }
+
+@media (min-width: 500px) {
+  .accueil-image {
+    margin-top: -15%;
+    width: 70%;
+    max-width: 100%; /* Empêche l’image d’être plus grande que son conteneur */
+    height: auto; /* Maintient le ratio de l’image */
+  }
+
+  .accueil-phone {
+    width: 100%;
+    max-width: 500px; /* Ex : Limite la taille maximale */
+  }
+
+  .call-to-action {
+    margin-top: -20%;
+  }
+}
+
 
 /* Responsive pour les tablettes et plus larges */
 @media (min-width: 768px) {
