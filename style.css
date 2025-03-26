@@ -4,7 +4,7 @@
   src: url('/assets/fonts/Labora-Regular.ttf') format('truetype');
 }
 
-/* Configuration générale */
+/* ----------------------- Configuration générale ----------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@ img {
   display: block;
 }
 
-/* Header */
+/* ----------------------- Header ----------------------- */
 header {
   position: fixed;
   top: 0;
@@ -82,7 +82,7 @@ header .logo {
   transform: translateY(-50%) scale(0.7);
   font-family: 'Labora', sans-serif;
   display: block;
-  color: white
+  color: white;
 }
 
 header nav ul {
@@ -93,7 +93,7 @@ header nav ul {
   align-items: center;
   padding: 0;
   margin: 0;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 header nav li {
@@ -117,7 +117,7 @@ header nav a {
 /* Boutons */
 .cta-buttons {
   display: flex;
-  flex-direction:row; /* Empile les boutons sur mobile */
+  flex-direction: row; /* Empile les boutons sur mobile */
   gap: 10px;
   margin-top: 14%;
   justify-content: center;
@@ -199,8 +199,20 @@ header nav a {
   }
 
   .cta-buttons {
-    flex-direction: row;  /* Aligner les boutons horizontalement */
-    gap: 20px;
+    gap: 10px;
+    margin-right: 0vw;
+    margin-top: 0;
+  }
+
+  .button.download {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    transform: none; /* Supprime la réduction de taille */
+    font-size: 100%;
+  }
+
+  .button.discover {
+    display: block; /* Afficher le bouton de découverte */
   }
   
   header .logo {
@@ -256,10 +268,10 @@ header nav a {
 
   .button.discover {
     display: block; /* Afficher le bouton de découverte */
-}
+  }
 }
 
-/* Accueil */
+/* ----------------------- Accueil Landing 1 ----------------------- */
 .accueil {
   position: relative;
   display: flex;
@@ -368,7 +380,6 @@ header nav a {
   }
 }
 
-
 /* Responsive pour les tablettes et plus larges */
 @media (min-width: 768px) {
   .accueil-content {
@@ -396,23 +407,6 @@ header nav a {
     font-size: 2vw;
     text-align: left;
   }
-
-  .cta-buttons {
-    gap: 10px;
-    margin-right: 0vw;
-    margin-top: 0;
-  }
-
-  .button.download {
-    padding-left: 3vw;
-    padding-right: 3vw;
-    transform: none; /* Supprime la réduction de taille */
-    font-size: 100%;
-  }
-
-  .button.discover {
-    display: block; /* Afficher le bouton de découverte */
-}
 
 .call-to-action {
   margin-top: -12vw;
@@ -465,3 +459,4 @@ header nav a {
   }
 }
 
+/* ----------------------- Accueil Landing 2 ----------------------- */
