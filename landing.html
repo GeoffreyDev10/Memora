@@ -7,33 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="rectangle-18"></div>
-    <!-- Bloc regroupant tout le header -->
-    <div class="header">
-        <div class="rectangle-11"></div>
-        <div class="t-l-chargement">Téléchargement</div>
-        <div class="rectangle-12"></div>
-        <div class="d-couvrir">Découvrir</div>
-        <img class="arrow-1" src="images/Arrow 1.png" />
-        <div class="pr-sentation">Présentation</div>
-        <div class="nos-r-seaux">Nos réseaux</div>
-        <div class="a-propos">A propos</div>
-        <img class="info" src="images/Info.png" />
-      </div>
-      <div class="landing-1">
-        <img class="private-pv-2" src="images/Private PV2.png" />
-        <div class="exprime-ta-cr-ativit">Exprime ta créativité...</div>
-        <img class="neon-blurry-wave" src="images/neon blurry wave.png" />
-        <div class="memora">Memora</div>
-        <div class="parce-que-chaque-souvenir-m-rite-d-tre-c-l-br">
-          Parce que chaque souvenir mérite d&#039;être célébré !
+    <!-- Fond principal -->
+    <div class="fond-web-principale"></div>
+
+    <!-- Début du header -->
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Présentation<span class="arrow">↓</span></a></li>
+            <li><a href="#">Nos réseaux</a></li>
+            <li><a href="#">A propos<img src="images/Info.png" alt="Info" class="info-icon"></a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <h1>Memora</h1>
         </div>
-        <img
-          class="mockup1-memora-iphone"
-          src="images/mockup1 memora iphone.png"
-        />
-      </div>
-      
+        <div class="cta-buttons">
+          <a href="#" class="button discover">Découvrir</a>
+          <a href="#" class="button download">Téléchargement</a>
+        </div>
+      </header>
+    <!-- Fin du header -->
+
+    <!-- Section de la première landing page -->
+    <main>
+        <section class="accueil">
+            <div class="accueil-content">
+                <div class="accueil-text">
+                    <h1>Memora</h1>
+                    <p>Parce que chaque souvenir mérite d'être célébré !</p>
+                </div>
+                <div class="accueil-image">
+                    <img src="images/mockup1 memora iphone.png" alt="Mockup de téléphones" class="accueil-phone">
+                </div>
+            </div>
+        </section>
+          
+
+          <section class="call-to-action">
+            <p>Exprime ta créativité...</p>
+              <div class="fleche-scroll">
+                <img src="images/Private PV2.png" alt="Flèche" class="arrow">
+              </div>
+          </section>
+        </main>
+    <!-- Fin de la première page -->
 </body>
 </html>
-
