@@ -1,0 +1,120 @@
+/* Styles de base (mobile-first) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #F5F8F2, #8F9B9B);
+    font-family: "Montserrat Alternates", sans-serif;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.background-image,
+.background-image2 {
+    position: absolute;
+    width: clamp(60px, 18vw, 200px);
+    height: auto;
+    opacity: 0.8;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.background-image {
+    top: 58.4vh;
+    left: 1.6vw;
+}
+
+.background-image2 {
+    top: 40vh;
+    left: 75vw;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #333;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #8F9B9B, #F5F8F2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.video-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86%;
+    height: 81.8%;
+    background: gray;
+    border-radius: 10px;
+    position: absolute;
+    top: 9.6%;
+    left: 6.8%;
+    cursor: pointer;
+}
+
+.video-placeholder::after {
+    content: "▶";
+    font-size: clamp(2rem, 10vw, 6rem);
+    color: white;
+}
+
+/* Tablettes */
+@media (min-width: 768px) {
+    
+
+    .background-image {
+        top: 66.2vh;
+        left: 4vw;
+    }
+
+    .background-image2 {
+        top: 21.6vh;
+        left: 77.6vw;
+    }
+
+    .container {
+        text-align: left;
+        padding: 0 40px;
+    }
+}
+
+/* Ordinateurs */
+@media (min-width: 1024px) {
+    
+
+    .background-image {
+        top: 73.4vh;
+        left: 15.2vw;
+    }
+
+    .background-image2 {
+        top: 10.8vh;
+        left: 72vw;
+    }
+
+    .container {
+        gap: 40px;
+    }
+}
