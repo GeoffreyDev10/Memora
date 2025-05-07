@@ -1,70 +1,136 @@
 /* Réinitialisation des marges et padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Style du corps de la page */
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #BBC3C0, #384C50);
-    min-height: 100vh;
-    color: #fff;
-  }
-  
-  /* Conteneur principal */
-  .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 50px;
-  }
-  
-  /* Section principale */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style du corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #BBC3C0, #364A4F);
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteneur principal */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur pour les grands écrans */
+  padding: 20px; /* Réduit le padding pour mobile */
+}
+
+/* Section principale */
+.main-section {
+  display: flex;
+  flex-direction: column; /* Colonne par défaut pour mobile */
+  align-items: center;
+  gap: 20px; /* Espace entre les éléments */
+  text-align: center; /* Centre le texte pour mobile */
+}
+
+/* Style du titre */
+h1 {
+  font-size: 2rem; /* Plus petit pour mobile */
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* Style de la boîte de description */
+.description-box {
+  width: 100%; /* Prend toute la largeur pour mobile */
+  max-width: 400px; /* Limite la largeur pour les grands écrans */
+  background: linear-gradient(to right, #384C50, #BBC3C0);
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Style du cercle et son contenu */
+.circle-wrapper {
+  background: #7A8A82;
+  width: 120px; /* Plus petit pour mobile */
+  height: 120px; /* Plus petit pour mobile */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid #333;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Ajuste la taille du SVG */
+.circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-svg text {
+  font-size: 10px; /* Taille adaptée pour mobile */
+  font-weight: bold;
+  fill: #333; /* Couleur visible */
+}
+
+/* Styles pour les écrans moyens (tablettes) */
+@media (min-width: 768px) {
   .main-section {
-    display: flex;
-    align-items: center;
-    gap: 150px; /* Espace entre le titre et le cercle */
+      flex-direction: row; /* Passe en ligne pour tablette */
+      align-items: center;
+      gap: 50px; /* Augmente l'espace entre les éléments */
+      text-align: left; /* Aligne le texte à gauche */
   }
-  
-  /* Style du titre */
+
   h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: black;
+      font-size: 2.5rem; /* Taille plus grande pour tablette */
   }
-  
-  /* Style de la boîte de description */
-  .description-box {
-    width: 400px;
-    background: linear-gradient(to right, #384C50, #BBC3C0);;
-    background-color:rgba(255, 255, 255, 0.1); 
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    line-height: 1.5;
-    color: #fff;
-  }
-  
-  /* Style du cercle et son contenu */
+
   .circle-wrapper {
-    background: #7A8A82;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid #333;
-    cursor: pointer; /* Ajoute un curseur de pointeur pour indiquer que c'est un bouton */
-    padding: 0;
+      width: 150px; /* Taille plus grande pour tablette */
+      height: 150px;
   }
-  
-  /* Ajuste la taille du SVG */
-  .circle-svg {
-    width: 100%;
-    height: 100%;
+
+  .description-box {
+      max-width: 500px; /* Augmente la largeur pour tablette */
   }
+
+  .circle-svg text {
+    font-size: 14px; /* Taille plus grande pour tablette */
+  }
+}
+
+/* Styles pour les écrans larges (ordinateurs) */
+@media (min-width: 1024px) {
+  .container {
+      padding: 50px; /* Restaure le padding pour les grands écrans */
+  }
+
+  h1 {
+      font-size: 3rem; /* Taille originale pour ordinateur */
+  }
+
+  .circle-wrapper {
+      width: 200px; /* Taille originale pour ordinateur */
+      height: 200px;
+  }
+
+  .description-box {
+      max-width: 600px; /* Largeur plus grande pour ordinateur */
+  }
+
+  .main-section {
+      gap: 150px; /* Espace original entre les éléments */
+  }
+
+  .circle-svg text {
+    font-size: 20px; /* Taille originale pour ordinateur */
+  }
+}
