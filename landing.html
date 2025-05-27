@@ -10,11 +10,21 @@
     <!-- Fond principal -->
     <div class="fond-web-principale"></div>
 
-    <!-- Début du header -->
+    <!-- Fond fixe visible uniquement pendant le scroll de phrases -->
+    <div class="fond-fixe-scroll"></div>
+
+      <!-- Début du header -->
     <header>
         <nav>
           <ul>
-            <li><a href="#">Présentation<span class="arrow">↓</span></a></li>
+            <li class="dropdown">
+        <a href="#" id="presentation-link">Présentation<span class="arrow">↓</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section1">Memora, c'est quoi ?</a></li>
+            <li><a href="#section2">Fonctionnalités</a></li>
+            <li><a href="#section3">Qui sommes nous ?</a></li>
+          </ul>
+        </li>
             <li><a href="#">Nos réseaux</a></li>
             <li><a href="#">A propos<img src="images/Info.png" alt="Info" class="info-icon"></a></li>
           </ul>
@@ -27,9 +37,9 @@
           <a href="#" class="button download">Téléchargement</a>
         </div>
       </header>
-    <!-- Fin du header -->
+      <!-- Fin du header -->
 
-    <!-- Section de la première landing page -->
+      <!-- Début de la première page -->
     <main>
         <section class="accueil">
             <div class="accueil-content">
@@ -47,10 +57,66 @@
           <section class="call-to-action">
             <p>Exprime ta créativité...</p>
               <div class="fleche-scroll">
-                <img src="images/Private PV2.png" alt="Flèche" class="arrow">
+                <img src="images/arrow.svg" alt="Flèche" class="arrow">
               </div>
           </section>
         </main>
     <!-- Fin de la première page -->
+
+      <!-- Début de la deuxième page -->    
+
+    <!-- Bloc de transition de phrases avec effet de scroll contrôlé -->
+    <section class="scroll-zone">
+      <div class="sticky-wrapper">
+        <p class="texte-impact">Tout commence ici...</p>
+        <p class="texte-impact">Chaque souvenir a sa place...</p>
+        <p class="texte-impact">Créez un album mémorable avec Memora.</p>
+      </div>
+    </section>
+
+      <!-- Fin de la deuxième page -->
+
+      <!-- Début de la troisième page -->
+<h1 id="section1" class="section-title">Le partage au bout des doigts...</h1>
+<section class="feature-section" id="feature-section">
+  <!-- Première box (animée à gauche) -->
+  <div class="feature-box left-slide">
+    <div class="box">
+      <img src="images/souvenirs1.jpg" alt="Des albums personnalisés">
+    </div>
+    <div class="arrow feature-arrow"><span>→</span></div>
+    <div class="feature-text">
+      <h3>Créer des souvenirs collectifs</h3>
+      <p>"Memora transforme chaque album en un projet collectif. Imaginez partager les moments marquants de votre vie, chacun ajoutant sa touche personnelle pour créer une œuvre commune. Un moyen simple et fun de tisser des liens à travers les souvenirs."</p>
+    </div>
+  </div>
+
+  <!-- Deuxième box (animée à droite) -->
+  <div class="feature-box right-slide">
+    <div class="feature-text">
+      <h3>Des souvenirs tangibles</h3>
+      <p>"Les souvenirs numériques prennent une nouvelle dimension avec Memora. Passez du virtuel au réel en imprimant vos albums, créant ainsi des objets précieux à partager, offrir ou garder pour toujours. Vos moments les plus précieux méritent d'être vécus à chaque instant."</p>
+    </div>
+    <div class="arrow feature-arrow"><span>←</span></div>
+    <div class="box">
+      <img src="images/souvenirs2.jpg" alt="Des albums collaboratifs">
+    </div>
+  </div>
+
+  <!-- Troisième box (animée à gauche) -->
+  <div class="feature-box left-slide">
+    <div class="box">
+      <img src="images/souvenirs3.jpg" alt="Imprimez vos créations">
+    </div>
+    <div class="arrow feature-arrow"><span>→</span></div>
+    <div class="feature-text">
+      <h3>Vivre les souvenirs ensemble</h3>
+      <p>"Un album n’est pas seulement une collection de photos, mais une mémoire vivante. Grâce à Memora, chaque photo devient un point de départ pour des souvenirs partagés, des anecdotes et des émotions qui évoluent au fil du temps."</p>
+    </div>
+  </div>
+</section>
+<!-- Fin de la troisième page -->
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   min-width: 320px; /* Empêche le site de casser en dessous d'une certaine largeur */
@@ -29,7 +33,7 @@ body {
     rgba(51, 71, 76, 1) 97.0%
   );
   width: 100%;
-  height: 6758px;
+  height: 7758px;
   position: absolute;
   z-index: -1;
 }
@@ -56,28 +60,34 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(175.39deg, 
-    rgba(51, 71, 76, 1) 3.4%, 
-    rgba(255, 255, 255, 1) 19.0%, 
-    rgba(77, 83, 45, 1) 33.3%, 
-    rgba(245, 248, 242, 1) 54.7%, 
-    rgba(51, 71, 76, 1) 97.0%);
-  background-attachment: fixed;
-  padding: 15px 20px;  /* Ajuste le padding sur mobile */
+  background: transparent;
+  padding: 15px 20px;
   height: 110px;
   z-index: 10;
   display: flex;
-  flex-direction: column; /* Empile les éléments verticalement sur mobile */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(51, 71, 76, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); 
+}
+
+header nav a,
+header .logo {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 1px rgba(0, 0, 0, 0.4);
+}
+.info-icon {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
 }
 
 header .logo {
   position: absolute;
-  left: 3%; /* Ajuste cette valeur selon la distance souhaitée du bord gauche */
+  left: 3%; 
   top: 30%;
   transform: translateY(-50%) scale(0.7);
   font-family: 'Labora', sans-serif;
@@ -88,7 +98,7 @@ header .logo {
 header nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* Empile la navigation sur mobile */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -98,7 +108,7 @@ header nav ul {
 
 header nav li {
   font-size: 20px;
-  margin-bottom: 10px;  /* Espace entre les éléments de la navigation */
+  margin-bottom: 10px;  
   display: none;
 }
 
@@ -110,14 +120,14 @@ header nav a {
   display: flex;
   align-items: center;
   padding: 10px;
-  font-size: 20px; /* Taille de police fixe en pixels */
+  font-size: 20px; 
   margin-top: 10%;
 }
 
 /* Boutons */
 .cta-buttons {
   display: flex;
-  flex-direction: row; /* Empile les boutons sur mobile */
+  flex-direction: row; 
   gap: 10px;
   margin-top: 14%;
   justify-content: center;
@@ -158,7 +168,7 @@ header nav a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: auto; /* Ajuste la hauteur */
+    height: auto; 
   }
 
   header .logo {
@@ -168,7 +178,7 @@ header nav a {
   }
 
   .cta-buttons {
-    margin-right: -40vw; /* Évite que les boutons débordent */
+    margin-right: -40vw; 
     margin-top: 0;
   }
 
@@ -181,21 +191,21 @@ header nav a {
 /* Media Queries pour les tablettes et écrans plus larges */
 @media (min-width: 768px) {
   header {
-    flex-direction: row; /* Aligner le logo et la navigation horizontalement */
-    justify-content: space-between; /* Espacement égal entre le logo et la navigation */
+    flex-direction: row;
+    justify-content: space-between; 
     padding: 15px 30px;
   }
 
   header nav ul {
-    flex-direction: row;  /* Aligner les éléments de la navigation horizontalement */
+    flex-direction: row; 
   }
 
   header nav li {
-    margin-right: 20px; /* Espace horizontal entre les éléments de la navigation */
+    margin-right: 20px;
   }
 
   header nav a {
-    padding: 10px 15px; /* Réduit le padding sur les écrans plus larges */
+    padding: 10px 15px;
   }
 
   .cta-buttons {
@@ -207,12 +217,12 @@ header nav a {
   .button.download {
     padding-left: 3vw;
     padding-right: 3vw;
-    transform: none; /* Supprime la réduction de taille */
+    transform: none; 
     font-size: 100%;
   }
 
   .button.discover {
-    display: block; /* Afficher le bouton de découverte */
+    display: block; 
   }
   
   header .logo {
@@ -224,17 +234,17 @@ header nav a {
 /* Media Queries pour les grands écrans (≥ 1024px) */
 @media (min-width: 1024px) {
   header {
-    padding: 0 50px; /* Augmenter le padding pour les grands écrans */
+    padding: 0 50px; 
   }
 
   header nav li {
-    font-size: 1vw; /* Augmenter la taille de la police sur les grands écrans */
+    font-size: 1vw; 
     display: block;
     font-family: 'Roboto', sans-serif;
   }
 
   header nav a {
-    padding: 15px 20px; /* Augmenter l'espace des liens */
+    padding: 15px 20px;
   }
 
   header nav .arrow {
@@ -262,12 +272,121 @@ header nav a {
   .button.download {
     padding-left: 3vw;
     padding-right: 3vw;
-    transform: none; /* Supprime la réduction de taille */
+    transform: none; 
     font-size: 100%;
   }
 
   .button.discover {
-    display: block; /* Afficher le bouton de découverte */
+    display: block; 
+  }
+}
+
+/* Style du menu déroulant */
+header nav .dropdown {
+  position: relative;
+}
+
+header nav .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 111.95%;
+  left: -5%;
+  width: 230px;
+  background-color: rgba(61, 81, 86, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s 0.5s;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: none;
+}
+
+/* Élément du menu */
+header nav .dropdown-menu li {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+/* Lien texte */
+header nav .dropdown-menu li a {
+  display: block;
+  padding: 14px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+/* Lignes de séparation fixes et centrées */
+header nav .dropdown-menu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  z-index: 1;
+}
+
+header nav .dropdown-menu li:last-child {
+  padding-bottom: 8px; /* au lieu de 18px */
+}
+
+/* Hover uniquement sur le texte/fond */
+header nav .dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+/* Ouverture du menu */
+header nav .dropdown.open .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px;
+  animation: unfold 0.5s ease-out forwards;
+}
+
+/* Fermeture du menu */
+header nav .dropdown.close .dropdown-menu {
+  animation: fold 0.5s ease-in forwards;
+}
+
+/* Animation d'ouverture */
+@keyframes unfold {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* Animation de fermeture */
+@keyframes fold {
+  0% {
+    max-height: 500px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -280,42 +399,42 @@ header nav a {
   text-align: left;
   color: rgb(0, 0, 0);
   width: 100%;
-  min-height: 100vh; /* Utilise toute la hauteur de la fenêtre */
-  padding-top: 5vh; /* Ajuste l'espacement sous le header */
+  min-height: 100vh; 
+  padding-top: 5vh; 
 }
 
 .accueil-content {
   display: flex;
-  justify-content: center; /* Centrer le contenu horizontalement */
+  justify-content: center; 
   align-items: center;
-  max-width: 190vw; /* Largeur réduite pour que tout s'ajuste mieux */
-  flex-direction: column;  /* Empile le texte et l'image */
-  width: 100%; /* S'assurer que tout occupe toute la largeur */
+  max-width: 190vw; 
+  flex-direction: column;  
+  width: 100%; 
 }
 
 .accueil-text {
   background-image: url("images/neon%20blurry%20wave.png");
-  background-size: 100% 150%; /* L'image se redimensionne pour couvrir toute la section */
+  background-size: 100% 150%; 
   background-position: center center;
   padding: 40px;
   z-index: 1;
   width: 80%;
   margin-bottom: 2vw;
-  font-size: clamp(16px, 5vw, 50px); /* Taille adaptative sans être trop grande */
+  font-size: clamp(16px, 5vw, 50px);
   display: none;
 }
 
 .accueil-text h1 {
-  font-size: clamp(20px, 8vw, 80px); /* Évite une taille trop grande ou trop petite */
+  font-size: clamp(20px, 8vw, 80px); 
   font-weight: bold;
   margin-bottom: 10px;
   font-family: 'Labora', sans-serif;
-  display: block; /* S'assurer qu'il s'affiche */
+  display: block; 
   text-align: center;
 }
 
 .accueil-text p {
-  font-size: clamp(15px, 3vw, 24px); /* Ajuste la taille du texte */
+  font-size: clamp(15px, 3vw, 24px); 
   font-family: 'Roboto', sans-serif;
   margin: 0;
   line-height: 1.4;
@@ -326,14 +445,14 @@ header nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -15%; /* Ajoute un peu d'espace entre l'image et le texte */
-  width: 80%; /* Augmente la taille de l'image tout en restant fluide */
-  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+  margin-top: -15%;
+  width: 80%; 
+  max-width: 100%; 
   height: auto;
 }
 
 .accueil-phone {
-  width: 100%; /* L'image occupe 100% de la largeur de son conteneur */
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -349,30 +468,41 @@ header nav a {
 
 .call-to-action p {
   font-size: 1.5rem;
-  color: #333;
-  font-weight: bold;
+  color: #000000;
+
 }
 
 .fleche-scroll {
   position: absolute;
-  bottom:1%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
   color: white;
+  animation: bounce 2.5s infinite;
+}
+
+/* Définition de l'animation bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0); 
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px); 
+  }
 }
 
 @media (min-width: 500px) {
   .accueil-image {
     margin-top: -15%;
     width: 70%;
-    max-width: 100%; /* Empêche l’image d’être plus grande que son conteneur */
-    height: auto; /* Maintient le ratio de l’image */
+    max-width: 100%;
+    height: auto; 
   }
 
   .accueil-phone {
     width: 100%;
-    max-width: 500px; /* Ex : Limite la taille maximale */
+    max-width: 500px; 
   }
 
   .call-to-action {
@@ -383,8 +513,8 @@ header nav a {
 /* Responsive pour les tablettes et plus larges */
 @media (min-width: 768px) {
   .accueil-content {
-    flex-direction: row;  /* Aligne horizontalement le texte et l'image */
-    gap: 0px;  /* Espacement plus important entre le texte et l'image */
+    flex-direction: row;  
+    gap: 0px;  
   }
 
   .accueil-text {
@@ -416,47 +546,323 @@ header nav a {
 /* Pour les grands écrans (≥ 1024px) */
 @media (min-width: 1024px) {
   .accueil-content {
-    gap: 20vw; /* Espacement entre les éléments */
+    gap: 20vw; 
     flex-direction: row;
-    justify-content: space-between; /* Espacement plus grand entre le texte et l'image */
+    justify-content: space-between; 
     margin-left: 10vw;
     margin-top: 0;
     width: 100%;
   }
 
   .accueil-text {
-    width: 50%; /* Réduit la largeur du texte pour laisser plus d'espace pour l'image */
+    width: 50%; 
     padding: 30px;
     display: block;
   }
 
   .accueil-phone {
-    width: 75%; /* Réduit la taille de l'image pour la version desktop */
-    max-width: 500vw; /* Assure que l'image n'occupe pas trop de place */
+    width: 75%; 
+    max-width: 500vw; 
     margin-right: 10vw;
   }
   
   .accueil-image {
-    margin-top: 0; /* Supprime l'espacement entre l'image et le texte */
+    margin-top: 0; 
   }
 
   .accueil-text h1 {
-    font-size: 150px; /* Ajuste la taille du titre */
+    font-size: 150px;
     display: block;
   }
 
   .accueil-text p {
-    font-size: 24px; /* Ajuste la taille du texte */
+    font-size: 24px; 
     margin-top: -40px;
   }
 
   .call-to-action {
-    margin-top: -6%; /* Ajuste l'espacement du CTA */
+    margin-top: -6%; 
   }
 
   .fleche-scroll {
-    bottom: -1%;
+    bottom: 1.5%;
   }
 }
 
 /* ----------------------- Accueil Landing 2 ----------------------- */
+
+.scroll-zone {
+  height: 300vh; /* Simule 3 "écrans" de scroll */
+  position: relative;
+  z-index: 1;
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; 
+  flex-direction: column;
+}
+
+.texte-impact {
+  position: absolute;
+  top: 51%;
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-weight: bold;
+  text-align: center;
+  color: #2B2621;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  line-height: 1.2;
+  max-width: 90%;
+}
+
+.texte-impact.active {
+  opacity: 1;
+  transform: scale(1);
+  animation: impact 0.6s ease;
+}
+
+@keyframes impact {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.fond-fixe-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(175.39deg, 
+    rgba(254, 255, 255, 1) 3.4%, 
+    rgba(211, 213, 192, 1) 19.0%, 
+    rgba(170, 172, 153, 1) 33.3%, 
+    rgb(132, 135, 111, 1) 64.7%, 
+    rgb(132, 135, 111, 1) 97.0%);
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* ----------------------- Accueil Landing 3 ----------------------- */
+
+/* Title for the section */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: -22px;
+  color: rgb(0, 0, 0);
+  margin-top: 170px; 
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+/* Animation pour le slide-in du titre */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation pour le slide-out du titre */
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Ajouter la classe slide-in quand le titre entre dans la vue */
+.section-title {
+  animation: slideInLeft 1s forwards;
+}
+
+/* Classe pour slide-out */
+.slide-out-title {
+  animation: slideOutRight 1s forwards;
+}
+
+/* Pour les flèches spécifiques à cette section */
+.feature-arrow {
+  font-size: 50px; 
+  color: black; 
+}
+
+/* Section des fonctionnalités */
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  gap: 50px; 
+  margin-top: 100px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  width: 100%; 
+  max-width: 900px;
+  gap: 40px; 
+  margin: 0 auto;
+}
+
+/* Boîtes contenant les images */
+
+.box {
+  width: 230px; 
+  height: 230px; 
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Images à l'intérieur des boîtes */
+.box img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 15px; 
+}
+
+/* Effet au survol des boîtes */
+.box:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Animation pour l'apparition des boîtes */
+.feature-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  width: 100%;
+  max-width: 900px;
+  gap: 40px;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.feature-box.left-slide {
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards;
+}
+
+.feature-box.right-slide {
+  transform: translateX(100%);
+  animation: slideInRight 1s forwards;
+}
+
+/* Animation au survol */
+.left-slide:hover {
+  transform: translateX(0) scale(1.05); 
+}
+
+.feature-text {
+  flex: 1; 
+}
+
+.feature-text h3 {
+  font-family: 'Labora', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2B2621;
+}
+
+.feature-text p {
+  font-size: 16px;
+  max-width: 500px;
+  text-align: left;
+  color: #2B2621;
+}
+
+/* Animation de slide */
+.left-slide, .right-slide {
+  transform: translateX(-100%); 
+  opacity: 0; 
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Quand l'élément entre dans la vue, appliquer l'animation slide-in */
+.in-view.left-slide {
+  transform: translateX(0); 
+  opacity: 1; 
+  animation: slideInLeft 1s forwards;
+}
+
+.in-view.right-slide {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
