@@ -19,7 +19,7 @@ L'application offre également la possibilité d'imprimer les albums en haute qu
 1. Clonez le dépôt avec la commande suivante :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/memora.git
+   git clone https://github.com/GeoffreyDev10/Memora.git
 
 
 Technologies Utilisées
