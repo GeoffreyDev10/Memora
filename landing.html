@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memora - Créez votre album mémorable</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="fstyle.css">
 </head>
 <body>
     <!-- Fond principal -->
@@ -117,6 +120,141 @@
 </section>
 <!-- Fin de la troisième page -->
 
-    <script src="script.js"></script>
+<!-- Début de la quatrième page -->
+
+<section class="landing3">
+  <div class="background-text">
+          <div>MEM</div>
+          <div>ORA</div>
+      </div>
+      <img src="images/neon blurry wave.png" alt="Deco" class="background-image">
+
+      <div class="slider-mobile">
+          <button class="arrow arrow-left" aria-label="Précédent">&#8592;</button>
+      </div>
+      <div class="cards">
+          <div class="card creation">
+              <h3>Création</h3>
+              <p>
+                  Le projet Memora révolutionne la manière de créer et de préserver des souvenirs en groupe grâce à une expérience conviviale et collaborative.<br>
+                  Cette application mobile innovante permet aux utilisateurs de créer un album photo unique en invitant famille et amis à participer activement.
+              </p>
+          </div>
+          <div class="card impression">
+              <h3>Impression</h3>
+              <p>
+                  Mais l’expérience ne s’arrête pas là : Memora permet d’imprimer ces albums en haute qualité, offrant une version physique et durable des souvenirs. 
+                  Ces albums deviennent des objets tangibles à partager, à offrir, ou à conserver précieusement.
+              </p>
+          </div>
+          <div class="card collaboration">
+              <h3>Collaboration</h3>
+              <p>
+                  Ensemble, ils peuvent partager des images, commenter les moments marquants et enrichir l’album avec leurs points de vue et anecdotes, rendant chaque page encore plus vivante et personnelle.<br>
+                  En rassemblant les proches autour de souvenirs communs, Memora célèbre l’importance des liens humains et capture l’essence des instants partagés.
+              </p>
+          </div>
+      </div>
+      <div class="slider-mobile">
+          <button class="arrow arrow-right" aria-label="Suivant">&#8594;</button>
+      </div>
+</section>
+
+<!-- Fin de la quatrième page -->
+
+<!-- Début de la cinquième page -->
+<section class="landing4">
+  <div class="container">
+    <!-- Section principale avec le titre et le cercle -->
+    <div class="main-section">
+      <!-- Titre principal -->
+      <h1>
+        THE<br />
+        TEAM.
+      </h1>
+
+      <!-- Cercle avec texte autour et flèche au centre -->
+      <button class="circle-wrapper">
+        <svg viewBox="0 0 200 200" class="circle-svg">
+          <!-- Cercle servant de chemin pour le texte -->
+          <circle 
+            id="circlePath"
+            cx="100" cy="100"
+            r="55"
+            fill="none"
+            stroke="#333"
+            stroke-width="2"
+          />
+
+          <!-- Texte suivant le chemin circulaire -->
+          <text fill="#333" font-size="20.1" font-weight="bold">
+            <textPath href="#circlePath" startOffset="0%">
+              click and scroll – click and scroll –
+            </textPath>
+          </text>
+
+          <!-- Flèche au centre -->
+          <polygon 
+            points="80,80 130,102 80,120" 
+            fill="#333" 
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Boîte de description -->
+    <div class="description-box">
+      <p>
+        Nos différents membres d’équipes ont travaillé 
+        ensemble pour créer l’application parfaite pour créer 
+        un album souvenir parfait pour vous, et pour que 
+        vous poussiez le recevoir directement chez vous.
+      </p>
+    </div>
+    <!-- Conteneur pour les cartes des membres -->
+    <div class="team-section">
+      <div class="team-scroll" id="teamContainer">
+        <!-- Les cartes apparaîtront ici via JS -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fin de la cinquième page -->
+
+<section class="footer">
+  <footer>
+    <img class="separation" src="images/Séparation.svg" />
+
+    <div class="footer-cta">
+      <button class="cta-section">
+        <span>Prêt à créer un album mémorable ? Commencez ici !</span>
+      </button>
+    </div>
+
+    <div class="footer-content">
+  <div class="footer-left">
+    <div class="name">Memora <img class="icon" src="images/instagram-icon.svg" /></div>
+  </div>
+
+  <div class="footer-center">
+  <button class="mentions">Mentions légales</button>
+  <span class="droits">Memora ©2024 - Tous droits réservés</span>
+</div>
+
+
+  <div class="footer-right">
+    <div class="language-selector">Français</div>
+    <button class="contact-section">
+      <span class="contact">Des questions ?</span>
+      <img src="images/Container.svg" class="questions" />
+    </button>
+  </div>
+</div>
+  </footer>
+</section>
+
+    <script src="script/script.js"></script>
+    <script src="script/script4.js"></script>
+    <script src="script/script5.js"></script>
 </body>
 </html>

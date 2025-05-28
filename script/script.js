@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
   const dropdown = document.querySelector('.dropdown');
   const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  // 🛠 FIX : empêche le menu d'être perçu comme déjà affiché au premier clic
+  // empêche le menu d'être perçu comme déjà affiché au premier clic
   dropdown.classList.remove('open');
   dropdown.classList.remove('close');
   dropdownMenu.style.display = 'none'; // désactive visuellement
