@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollContainer.classList.add("team-scroll");
   
       const members = [
-        { name: "Saraiva Valentin", role: "Chef de projet", photo: " " },
-        { name: "Hov Christophe", role: "Développeur", photo: " " },
-        { name: "Deverchere Geoffrey", role: "Développeur", photo: " " },
-        { name: "Germain Cyllia-Thévie", role: "Développeur", photo: " " },
-        { name: "Lacome Matthieu", role: "Designeur", photo: " " },
-        { name: "Yadel Camilia", role: "Marketing", photo: " " },
-        { name: "Meynard Mathis", role: "Marketing", photo: " " },
+        { name: "Saraiva Valentin", role: "Chef de projet", photo: "./images/Valentin.jpg" },
+        { name: "Hov Christophe", role: "Développeur", photo: "./images/Christophe.jpg" },
+        { name: "Deverchere Geoffrey", role: "Développeur", photo: "./images/Geoffrey.jpg" },
+        { name: "Germain Cyllia-Thévie", role: "Développeur", photo: "./images/Cyllia.jpg" },
+        { name: "Lacome Matthieu", role: "Designeur", photo: "./images/Matthieu.jpg" },
+        { name: "Yadel Camilia", role: "Marketing", photo: "./images/Camilia.jpg" },
+        { name: "Meynard Mathis", role: "Marketing", photo: "./images/Mathis.jpg" },
       ];
   
       members.forEach((member, i) => {

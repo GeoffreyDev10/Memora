@@ -146,21 +146,13 @@ header nav a {
   padding: 10px 30px;
 }
 
-.button.discover {
-  background-color: #4A7B83;
-}
-
-.button.discover:hover {
-  background-color: #6A9D9F;
-}
-
 .button.download {
-  background-color: #33575C;
+  background-color: #4A7B83;
   margin-right: -15vw;
 }
 
 .button.download:hover {
-  background-color: #4A7A7E;
+  background-color: #6A9D9F;
 }
 
 @media (min-width: 500px) {
@@ -890,6 +882,7 @@ header nav .dropdown.close .dropdown-menu {
   opacity: 0.7;
   text-align: center;
   font-family: 'Labora', sans-serif;  /* Utiliser la police Labora */
+  margin-top: 3%;
 }
 
 /* Image à l'intérieur de .landing3 */
@@ -962,7 +955,7 @@ header nav .dropdown.close .dropdown-menu {
   position: relative;
 }
 
-.arrow {
+.arrow.arrow-right {
   background: none;
   border: none;
   font-size: 2rem;
@@ -972,10 +965,6 @@ header nav .dropdown.close .dropdown-menu {
   padding: 0 0.5rem;
   transition: color 0.2s;
 }
-.arrow:active {
-  color: #7A8A82;
-}
-
 
 /* Tablettes et autre */
 @media (min-width: 768px) {
@@ -1007,7 +996,7 @@ header nav .dropdown.close .dropdown-menu {
   }
 
   .card.impression {
-    height: 450px;
+    height: 460px;
     margin-top: -20px;  /* Déplacement vers le bas pour la deuxième carte */
   }
 
@@ -1045,6 +1034,7 @@ header nav .dropdown.close .dropdown-menu {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
+  margin-top: 6%;
 }
 
 .main-section {
@@ -1206,6 +1196,7 @@ footer {
 }
 
 .cta-section {
+  position: relative;
   background-color: #709CA0;
   border-radius: 999px;
   padding: 15px 30px;
@@ -1214,7 +1205,25 @@ footer {
   color: #fff;
   border: none;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
 }
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #709CA0, #88B3B7);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  border-radius: 999px;
+}
+
+.cta-section:hover::before {
+  opacity: 1;
+}
+
 
 /* Conteneur principal du footer */
 .footer-content {
@@ -1267,7 +1276,7 @@ footer {
 .footer-center .droits {
   opacity: 0.8;
   margin-top: 0; 
-  margin-left: 150px;
+  margin-left: 120px;
 }
 
 .footer-center .mentions {
@@ -1299,6 +1308,56 @@ footer {
   color: white;
   cursor: pointer;
   margin-right: 20px;
+  min-width: max-content;
+  position: relative;
+  user-select: none;
+}
+
+.arrow-slide {
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.language-selector.open .arrow-slide {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  padding: 6px 0;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10;
+  font-size: 13px;
+  min-width: 100%;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.language-selector.open .language-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.language-menu div {
+  padding: 6px 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.language-menu div:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .contact-section {
@@ -1311,6 +1370,7 @@ footer {
   gap: 6px;
   font-size: 13px;
   cursor: pointer;
+  min-width: max-content;
 }
 
 .contact-section span {
@@ -1322,15 +1382,6 @@ footer {
 .questions {
   width: 18px;
   height: 18px;
-}
-
-.cta-section {
-  background-color: #709CA0;
-  transition: background-color 0.3s ease;
-}
-
-.cta-section:hover {
-  background: linear-gradient(135deg, #709CA0, #88B3B7);
 }
 
 .contact-section:hover {

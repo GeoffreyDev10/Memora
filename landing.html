@@ -36,7 +36,6 @@
           <h1>Memora</h1>
         </div>
         <div class="cta-buttons">
-          <a href="#" class="button discover">Découvrir</a>
           <a href="#" class="button download">Téléchargement</a>
         </div>
       </header>
@@ -97,8 +96,8 @@
   <!-- Deuxième box (animée à droite) -->
   <div class="feature-box right-slide">
     <div class="feature-text">
-      <h3>Des souvenirs tangibles</h3>
-      <p>"Les souvenirs numériques prennent une nouvelle dimension avec Memora. Passez du virtuel au réel en imprimant vos albums, créant ainsi des objets précieux à partager, offrir ou garder pour toujours. Vos moments les plus précieux méritent d'être vécus à chaque instant."</p>
+      <h3>Des souvenirs intemporels</h3>
+      <p>"Memora offre une nouvelle dimension à vos souvenirs numériques. En transformant chaque moment en une expérience mémorable, l’application vous permet de capturer vos souvenirs de manière créative et interactive. Que ce soit pour vous ou à partager, vos moments les plus précieux sont à portée de main, prêts à être revécus à tout instant."</p>
     </div>
     <div class="arrow feature-arrow"><span>←</span></div>
     <div class="box">
@@ -122,7 +121,7 @@
 
 <!-- Début de la quatrième page -->
 
-<section class="landing3">
+<section id="section2" class="landing3">
   <div class="background-text">
           <div>MEM</div>
           <div>ORA</div>
@@ -141,10 +140,9 @@
               </p>
           </div>
           <div class="card impression">
-              <h3>Impression</h3>
+              <h3>Souvenir</h3>
               <p>
-                  Mais l’expérience ne s’arrête pas là : Memora permet d’imprimer ces albums en haute qualité, offrant une version physique et durable des souvenirs. 
-                  Ces albums deviennent des objets tangibles à partager, à offrir, ou à conserver précieusement.
+                  "Des photos, vidéos, sons, et même des mots… Memora vous permet de rassembler vos souvenirs en un seul endroit pour créer des albums modernes et personnalisés. Que ce soit pour un voyage, une naissance, ou un simple moment du quotidien, donnez vie à vos souvenirs et partagez-les facilement. Parce que vos souvenirs méritent mieux qu'un dossier oublié."
               </p>
           </div>
           <div class="card collaboration">
@@ -163,7 +161,7 @@
 <!-- Fin de la quatrième page -->
 
 <!-- Début de la cinquième page -->
-<section class="landing4">
+<section id="section3" class="landing4">
   <div class="container">
     <!-- Section principale avec le titre et le cercle -->
     <div class="main-section">
@@ -243,7 +241,13 @@
 
 
   <div class="footer-right">
-    <div class="language-selector">Français</div>
+    <div class="language-selector" onclick="this.classList.toggle('open')">
+      Français <span class="arrow-slide">▼</span>
+        <div class="language-menu">
+          <div>English</div>
+          <div>Español</div>
+        </div>
+    </div>
     <button class="contact-section">
       <span class="contact">Des questions ?</span>
       <img src="images/Container.svg" class="questions" />
